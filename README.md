@@ -4,6 +4,8 @@ AdaPath answers multi-hop biomedical questions by finding paths over a
 knowledge graph that match both the semantics of a query and the structure
 of the graph. The pipeline has two stages.
 
+![AdaPath overview](assets/overview.png)
+
 **Path-Bank construction (offline).** Typed meta-paths are mined from the
 training split over PrimeKG using query-conditioned BM25 edge weighting,
 Personalized PageRank, and Yen's K-shortest paths. The resulting bank stores
