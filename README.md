@@ -1,8 +1,18 @@
 # AdaPath
 
-Adaptive path-finding over a biomedical knowledge graph for question
-answering. Builds a per-query path bank with query-conditioned BM25 edge
-weighting + Personalized PageRank + Yen's K-shortest paths.
+AdaPath answers multi-hop biomedical questions by finding paths over a
+knowledge graph that match both the semantics of a query and the structure
+of the graph. The pipeline has two stages.
+
+**Path-Bank construction (offline).** Typed meta-paths are mined from the
+training split over PrimeKG using query-conditioned BM25 edge weighting,
+Personalized PageRank, and Yen's K-shortest paths. The resulting bank stores
+type-abstracted path patterns rather than instantiated node sequences.
+
+**Meta-path guided path-finding (online).** For an incoming query, AdaPath
+retrieves the meta-paths whose types fit the query and expands a
+breadth-first search that is constrained by them, so exploration stays on
+biologically plausible routes instead of enumerating the neighborhood.
 
 ## Layout
 
