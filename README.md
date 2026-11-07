@@ -81,6 +81,7 @@ BioStrat-QA covers 1-, 2-, and 3-hop biomedical questions built from 60
 hand-curated metapaths over PrimeKG. Each record provides three query
 variants per (topic, answer) pair: `explicit_query`, `implicit_query`,
 `bare_query`.
+BioStrat-QA is also available on the [Hugging Face Hub](https://huggingface.co/datasets/kjh-0906/biostrat-qa).
 
 ## License
 
